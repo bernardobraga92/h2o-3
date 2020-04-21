@@ -1,7 +1,14 @@
 #! /bin/bash -x
 
 pwd
+export H2O_ORIGIN=$(pwd)
+export cp_dirname="h2o-3-$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')" # Original dir may contain special characters in it's name
+mkdir "../../../${cp_dirname}"
+cd "../../../${cp_dirname}"
 export H2O_BASE=$(pwd)
+cp -a $H2O_ORIGIN $H2O_BASE
+export H2O_PARENT_FOLDER=H2O_BASE
+export H2O_BASE="${H2O_BASE}/h2o-3"
 cd $H2O_BASE/h2o-k8s/tests/clustering/
 k3d --version
 k3d delete
@@ -20,4 +27,5 @@ export EXIT_STATUS=$?
 kubectl get pods
 kubectl get nodes
 k3d delete
+rm $H2O_PARENT_FOLDER -r
 exit $EXIT_STATUS
