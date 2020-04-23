@@ -8,16 +8,15 @@ import org.apache.avro.generic.GenericData;
 import org.apache.avro.generic.GenericDatumWriter;
 import org.apache.avro.generic.GenericRecord;
 import org.apache.avro.io.DatumWriter;
+import org.junit.Ignore;
 import water.util.StringUtils;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-/* A test file generator.
-  Use it offline, upload file into smalldata S3 bucket.
-*/
-class AvroFileGenerator {
+@Ignore
+public class AvroFileGenerator {
 
   public static void main(String[] args) throws IOException {
     generatePrimitiveTypes("/tmp/h2o-avro-tests/primitiveTypes.avro", 100);
