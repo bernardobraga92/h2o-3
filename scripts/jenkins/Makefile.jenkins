@@ -223,6 +223,8 @@ test-package-java:
 		h2o-parsers/h2o-orc-parser/build/libs/h2o-orc-parser-*.jar \
 		h2o-parsers/h2o-parquet-parser/src/ \
 		h2o-parsers/h2o-parquet-parser/build/libs/h2o-parquet-parser-*.jar \
+		h2o-parsers/h2o-parquet-parser-tests/src/ \
+		h2o-parsers/h2o-parquet-parser-tests/build/libs/h2o-parquet-parser-tests-*.jar \
 		h2o-persist-gcs/src/ \
 		h2o-persist-gcs/build/libs/h2o-persist-gcs-*.jar \
 		h2o-persist-hdfs/src/ \
