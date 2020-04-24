@@ -6,8 +6,6 @@ from tests import pyunit_utils
 
 def check_big_merge():
     h2o.remove_all()
-#    frame1 = h2o.import_file("/Users/wendycwong/temp/frame1.csv")
-#    frame2 = h2o.import_file("/Users/wendycwong/temp/frame2.csv")
     nrow = 1000000
     ncol = 2
     iRange = nrow/10
