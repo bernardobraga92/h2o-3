@@ -172,7 +172,7 @@ Here’s an example showing basic usage of the ``h2o.automl()`` function in *R* 
         train[,y] <- as.factor(train[,y])
         test[,y] <- as.factor(test[,y])
 
-        # Run AutoML for 20 base models (limited to 1 hour max runtime by default)
+        # Run AutoML for 20 base models (no time limit because max_models is set to 20)
         aml <- h2o.automl(x = x, y = y, 
                           training_frame = train,
                           max_models = 20,
